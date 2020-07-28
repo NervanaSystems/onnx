@@ -60,7 +60,7 @@ void FunctionExpandHelper(
   // add default values obtained from the function schema.
   const OpSchemaRegistry* schema_registry = OpSchemaRegistry::Instance();
   const auto schema = schema_registry->GetSchema(
-      node.op_type(), func.since_version(), node.domain());
+      node.op_type(), func.since_version(), "");
   std::map<std::string, OpSchema::Attribute> default_attrs =
       schema->attributes();
 
